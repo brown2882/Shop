@@ -2,11 +2,11 @@ import logo from './logo.svg';
 import './App.css';
 // import './assets/style/shop.scss'
 import {Home} from "./pages/home";
-import {useEffect, useState} from "react";
+import {memo, useEffect, useState} from "react";
 import RolexOne from './assets/images/rolex1.jpg'
 import RolexTwo from './assets/images/rolex2.jpg'
 import RolexTree from './assets/images/rolex3.webp'
-function App() {
+const App = memo(() => {
     const[photo, setphoto] = useState([
         {watch:RolexOne, id:1},
         {watch:RolexTwo, id:2},
@@ -54,6 +54,6 @@ function App() {
         }
     </div>
   );
-}
+})
 
 export default App;
